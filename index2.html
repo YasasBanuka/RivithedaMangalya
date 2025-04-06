@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aluth Avurudda Celebration - University of Vocational Technology</title>
+    <style>
+
+    @font-face {
+        font-family: 'Isiwara'; /* Any name you choose */
+        src: url('fonts/Isiwara.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+        :root {
+            --blue: #39428d;
+            --maroon: #750a19;
+            --gold: #f8cf17;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #fff;
+            /* background-image: url('bg.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat; */
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: row;
+            margin-bottom: 40px;
+        }
+        
+        .logo {
+            width: 220px;
+        }
+        
+        .title {
+            color: var(--blue);
+            font-family: 'Isiwara';
+            font-weight: 700;
+            text-align: center;
+            font-size: 50px;
+            margin-top: 20x;
+            margin-bottom: 30px;
+        }
+        
+        .title span {
+            color: var(--maroon);
+            font-weight: 700;
+            font-family: 'Isiwara';
+            font-size: 50px;
+
+        }
+        
+        .video-container {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%;
+            background-color: #000;
+            margin-bottom: 40px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .video-fallback {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(57, 66, 141, 0.9);
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .video-fallback button {
+            background-color: var(--gold);
+            border: none;
+            color: var(--blue);
+            font-weight: bold;
+            padding: 12px 24px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .video-fallback button:hover {
+            background-color: #fff;
+        }
+        
+        .description {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 1.8;
+            color: #555;
+        }
+        
+        .description strong {
+            color: var(--maroon);
+            /* font-weight: 700; */
+            font-family: 'Isiwara';
+            font-size: 25px;
+        }
+        
+        .accent-line {
+            height: 3px;
+            width: 80px;
+            background-color: var(--gold);
+            margin: 0 auto 40px;
+        }
+        
+        .bird {
+            position: absolute;
+            top: 60px;
+            left: -100px;
+            width: 80px;
+            opacity: 0;
+            z-index: 10;
+        }
+        
+        footer {
+            text-align: center;
+            color: #777;
+            font-size: 14px;
+            margin-top: 60px;
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .logo {
+                width: 140px;
+            }
+            
+            .title {
+                font-size: 24px;
+            }
+            
+            .description {
+                font-size: 16px;
+                padding: 0 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="logo2.png" alt="University of Vocational Technology Logo" class="logo">
+            <h1 class="title"> රිවිතෙද මංගල්‍ය <span> 2025</span></h1>
+        </header>
+        
+        <div class="video-container">
+            <video id="celebration-video" muted playsinline>
+                <source src="video/video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="video-fallback" id="video-fallback">
+                <h3>Autoplay is disabled in your browser</h3>
+                <p>Please click the button below to watch our Sinhalese New Year celebration video</p>
+                <button id="play-btn">Play Video</button>
+            </div>
+        </div>
+        
+        <div class="accent-line"></div>
+        
+        <p class="description">
+            Join us in celebrating <strong>රිවිතෙද මංගල්‍ය</strong>, the Sinhala and Tamil New Year—a time of renewal, gratitude, and community. The University of Vocational Technology invites you to participate in our traditional festivities honoring Sri Lankan heritage through cultural performances, traditional games, and authentic cuisine. This celebration marks the sun's movement from Meena Rashiya (House of Pisces) to Mesha Rashiya (House of Aries).
+        </p>
+        
+        <img src="/api/placeholder/80/40" alt="Asian Koel Bird" class="bird" id="koel-bird">
+        
+        <footer>
+            © 2025 University of Vocational Technology. All rights reserved.
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const video = document.getElementById('celebration-video');
+            const fallback = document.getElementById('video-fallback');
+            const playBtn = document.getElementById('play-btn');
+            const bird = document.getElementById('koel-bird');
+            
+            // Bird animation
+            setTimeout(() => {
+                bird.style.transition = 'all 8s ease-in-out';
+                bird.style.opacity = '1';
+                bird.style.transform = 'translateX(calc(100vw + 100px))';
+            }, 1000);
+            
+            // Video setup
+            // Replace with actual video URL when available
+            // video.src = "your-video-url.mp4";
+            
+            // Try to autoplay
+            const playPromise = video.play();
+            
+            if (playPromise !== undefined) {
+                playPromise.then(() => {
+                    // Autoplay started
+                    console.log('Autoplay started successfully');
+                }).catch(error => {
+                    // Autoplay was prevented
+                    console.log('Autoplay was prevented:', error);
+                    fallback.style.display = 'flex';
+                });
+            }
+            
+            // Play button for fallback
+            playBtn.addEventListener('click', () => {
+                video.play()
+                    .then(() => {
+                        fallback.style.display = 'none';
+                    })
+                    .catch(error => {
+                        console.log('Video play failed even after user interaction:', error);
+                        alert('Unable to play video. Please check your browser settings or try a different browser.');
+                    });
+            });
+            
+            // Reset bird animation when it completes
+            bird.addEventListener('transitionend', () => {
+                setTimeout(() => {
+                    bird.style.transition = 'none';
+                    bird.style.opacity = '0';
+                    bird.style.transform = 'translateX(-100px)';
+                    
+                    setTimeout(() => {
+                        bird.style.transition = 'all 8s ease-in-out';
+                        bird.style.opacity = '1';
+                        bird.style.transform = 'translateX(calc(100vw + 100px))';
+                    }, 15000);
+                }, 500);
+            });
+        });
+    </script>
+</body>
+</html>
